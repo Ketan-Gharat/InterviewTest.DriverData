@@ -41,11 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnalyserLookup.cs" />
+    <Compile Include="Analysers\AnalyserConfiguration.cs" />
     <Compile Include="Analysers\DeliveryDriverAnalyser.cs" />
     <Compile Include="Analysers\FormulaOneAnalyser.cs" />
     <Compile Include="Analysers\FriendlyAnalyser.cs" />
     <Compile Include="Analysers\GetawayDriverAnalyser.cs" />
     <Compile Include="Analysers\IAnalyser.cs" />
+    <Compile Include="Analysers\PeriodAnalysis.cs" />
     <Compile Include="CannedData.cs" />
     <Compile Include="HistoryAnalysis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
