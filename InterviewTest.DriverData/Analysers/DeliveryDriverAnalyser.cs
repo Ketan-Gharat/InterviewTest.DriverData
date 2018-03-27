@@ -4,8 +4,13 @@ using System.Linq;
 
 namespace InterviewTest.DriverData.Analysers
 {
-	// BONUS: Why internal?
-	internal class DeliveryDriverAnalyser : IAnalyser
+    // BONUS: Why internal?
+    /* Classes declared with internal can be access by any member within application i.e. (within assembly)
+     * 
+     * Declaring Class (DeliveryDriverAnalyser) as internal here limits the access within the current project assembly
+     */
+
+    internal class DeliveryDriverAnalyser : IAnalyser
 	{
         private AnalyserConfiguration _analyserConfiguration { get; set; }
         public DeliveryDriverAnalyser(AnalyserConfiguration analyserConfiguration)

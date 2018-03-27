@@ -7,11 +7,20 @@ namespace InterviewTest.DriverData.UnitTests.Analysers
 	[TestFixture]
 	public class FriendlyAnalyserTests
 	{
-		[Test]
+        // BONUS: What is AAA?
+        /* Arrange Act Assert is the one of the structutre way to write the unit units
+         * 
+         * Arrange: During Arrange you are arranging things prior to calling the method/function to test. 
+         * 
+         * Act : Perform the actual work of the test. Here we call the actual method and pass any required values if essential to the method to invoke it
+         * 
+         * Assert: The assertion is the part that ensures that your expectations are met. Here we verify the results.
+         * 
+         */
+
+        [Test]
 		public void ShouldAnalyseWholePeriodAndReturn1ForDriverRating()
 		{
-			// BONUS: What is AAA?
-
 			var data = new[]
 			{
 				new Period

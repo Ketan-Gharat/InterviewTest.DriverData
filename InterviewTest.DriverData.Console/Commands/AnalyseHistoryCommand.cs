@@ -8,15 +8,19 @@ namespace InterviewTest.Commands
 {
 	public class AnalyseHistoryCommand
 	{
-		// BONUS: What's great about readonly?
-		private readonly IAnalyser _analyser;
+        // BONUS: What's great about readonly?
+        /* Using readonly keyword  we can assign value at run time but only through the non-static constructor.
+         * 
+         * _analyser is declared readonly as it needs to be initialized once. 
+         */
+        private readonly IAnalyser _analyser;
 
 		public AnalyseHistoryCommand(IReadOnlyCollection<string> arguments)
 		{
 			var analysisType = arguments.Single();
 
 			_analyser = AnalyserLookup.GetAnalyser(analysisType);
-		}
+        }
 
 		public void Execute()
 		{

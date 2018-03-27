@@ -8,6 +8,13 @@ namespace InterviewTest.DriverData
         private static readonly DateTimeOffset _day = new DateTimeOffset(2016, 10, 13, 0, 0, 0, 0, TimeSpan.Zero);
 
         // BONUS: What's so great about IReadOnlyCollections?
+
+        /*  IReadOnlyCollections are strongly-typed, read-only collection of elements
+         *  It provides Count property on top of its inherent IEnumerable members.
+         *  The main benefit is that IReadOnlyCollections uses generic interfaces that are covariant i.e. we can use a derived type as the generic parameter, when passing in a collection into a method that's defined for a base type.
+         *  In the below case we are storing period data as IReadOnlyCollection which does not needs to be changed once define for our unit tests.
+         */
+
         public static readonly IReadOnlyCollection<Period> History = new[]
         {
             new Period
@@ -146,7 +153,7 @@ namespace InterviewTest.DriverData
             {
                 Start = _day + new TimeSpan(11, 30, 0),
                 End = _day + new TimeSpan(14, 0, 0),
-                AverageSpeed = 24
+                AverageSpeed = 24m
             },
             new Period
             {

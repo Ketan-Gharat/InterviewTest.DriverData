@@ -4,6 +4,10 @@ using NUnit.Framework;
 
 namespace InterviewTest.DriverData.UnitTests.Analysers
 {
+    /* Followed AAA Structure for writing unit tests.
+     * Followed Should_ExpectedBehavior_When_StateUnderTest Naming Convention for Unit tests naming
+     */
+
     [TestFixture]
     public class DeliveryDriverAnalyserTests
     {
@@ -83,7 +87,7 @@ namespace InterviewTest.DriverData.UnitTests.Analysers
         }
 
         [Test]
-        public void Should_YieldRatingOfOne_WhenDurationWithinTimeSlotAndWithMaxSpeedLimit()
+        public void Should_YieldRatingOfOne_When_DurationWithinTimeSlotAndWithMaxSpeedLimit()
         {
             var expectedResult = new HistoryAnalysis
             {
@@ -113,7 +117,7 @@ namespace InterviewTest.DriverData.UnitTests.Analysers
         }
 
         [Test]
-        public void Should_YieldCorrectRatingAndDuration_WhenPeriodDataSuppiledIsWithinTimeSlotWithBreaksAndWithinMaxSpeedLimit()
+        public void Should_YieldCorrectRatingAndDuration_When_PeriodDataSuppiledIsWithinTimeSlotWithBreaksAndWithinMaxSpeedLimit()
         {
             var expectedResult = new HistoryAnalysis
             {
