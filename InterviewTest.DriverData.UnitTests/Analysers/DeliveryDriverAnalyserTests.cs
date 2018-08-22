@@ -1,5 +1,4 @@
-﻿using System;
-using InterviewTest.DriverData.Analysers;
+﻿using InterviewTest.DriverData.Analysers;
 using NUnit.Framework;
 
 namespace InterviewTest.DriverData.UnitTests.Analysers
