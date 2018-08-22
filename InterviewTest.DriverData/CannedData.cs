@@ -61,7 +61,6 @@ namespace InterviewTest.DriverData
             }
         };
 
-
         public static readonly IReadOnlyCollection<Period> DeliveryHistoryTimeSlotNotInRange = new[]
         {
             new Period
@@ -94,7 +93,6 @@ namespace InterviewTest.DriverData
                 End = _day + new TimeSpan(21, 30, 0),
                 AverageSpeed = 18m
             }
-
         };
 
         public static readonly IReadOnlyCollection<Period> DeliveryHistortAverageSpeedGreaterThanMaxLimit = new[]
@@ -129,7 +127,6 @@ namespace InterviewTest.DriverData
                 End = _day + new TimeSpan(21, 30, 0),
                 AverageSpeed = 50.89m
             }
-
         };
 
         public static readonly IReadOnlyCollection<Period> DeliveryHistoryWithContinousWithMaxSpeedLimit = new[]
@@ -141,6 +138,7 @@ namespace InterviewTest.DriverData
                 AverageSpeed = 30m
             }
         };
+
         public static readonly IReadOnlyCollection<Period> DeliveryHistoryContinousWithinTimeSlotWithinMaxSpeedLimit = new[]
          {
             new Period
@@ -169,7 +167,6 @@ namespace InterviewTest.DriverData
             }
         };
 
-
         public static readonly IReadOnlyCollection<Period> DeliveryHistoryWithBreaksWithinTimeSlotWithinMaxSpeedLimit = new[]
         {
             new Period
@@ -197,7 +194,5 @@ namespace InterviewTest.DriverData
                 AverageSpeed = 28m
             }
         };
-
-
     }
 }

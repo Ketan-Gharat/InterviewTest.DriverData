@@ -2,8 +2,8 @@
 
 namespace InterviewTest.DriverData.Analysers
 {
-	public interface IAnalyser
-	{
-		HistoryAnalysis Analyse(IReadOnlyCollection<Period> history);
-	}
+    public interface IAnalyser
+    {
+        HistoryAnalysis Analyse(IReadOnlyCollection<Period> history);
+    }
 }

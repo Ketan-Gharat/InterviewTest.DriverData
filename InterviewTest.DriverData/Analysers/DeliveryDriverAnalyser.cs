@@ -6,23 +6,25 @@ namespace InterviewTest.DriverData.Analysers
 {
     // BONUS: Why internal?
     /* Classes declared with internal can be access by any member within application i.e. (within assembly)
-     * 
+     *
      * Declaring Class (DeliveryDriverAnalyser) as internal here limits the access within the current project assembly
      */
 
     internal class DeliveryDriverAnalyser : IAnalyser
-	{
+    {
         private AnalyserConfiguration _analyserConfiguration { get; set; }
+
         public DeliveryDriverAnalyser(AnalyserConfiguration analyserConfiguration)
         {
             _analyserConfiguration = analyserConfiguration;
         }
+
         public HistoryAnalysis Analyse(IReadOnlyCollection<Period> history)
         {
             HistoryAnalysis historyAnalysis = new HistoryAnalysis();
             if (history != null && history.Any())
             {
-                //Ignore anything outside of 9 - 5
+                //Get Valid Periods
                 var validPeriods = history.Where(period => period.End.TimeOfDay > _analyserConfiguration.StartTime && period.Start.TimeOfDay < _analyserConfiguration.EndTime).OrderBy(x => x.Start);
                 List<PeriodAnalysis> periodAnalyses = new List<PeriodAnalysis>();
 
