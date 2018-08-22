@@ -1,5 +1,6 @@
 ﻿using InterviewTest.DriverData.Analysers;
 using NUnit.Framework;
+using System;
 
 namespace InterviewTest.DriverData.UnitTests.Analysers
 {
@@ -10,6 +11,7 @@ namespace InterviewTest.DriverData.UnitTests.Analysers
     [TestFixture]
     public class DeliveryDriverAnalyserTests
     {
+        #region Private Variables
         private DeliveryDriverAnalyser deliveryDriverAnalyser;
 
         //9-5 Speed 30m
@@ -19,11 +21,17 @@ namespace InterviewTest.DriverData.UnitTests.Analysers
             EndTime = new TimeSpan(17, 0, 0),
             MaxSpeed = 30m
         };
+        #endregion Private Variables
+
+        #region Initialization
         [SetUp]
         public void Initialize()
         {
             deliveryDriverAnalyser = new DeliveryDriverAnalyser(analyserConfiguration);
         }
+        #endregion Initialization
+
+        #region Tests
 
         [Test]
         public void Should_YieldCorrectRatingAndDuration_When_PeriodDataSuppiledHasTimeSpanAndAverageSpeedInRange()
@@ -130,10 +138,14 @@ namespace InterviewTest.DriverData.UnitTests.Analysers
             Assert.That(actualResult.DriverRating, Is.EqualTo(expectedResult.DriverRating).Within(0.001m));
         }
 
+        #endregion Tests
+
+        #region TearDown
         [TearDown]
         public void TestsCompletion()
         {
             deliveryDriverAnalyser = null;
         }
+        #endregion TearDown
     }
 }
